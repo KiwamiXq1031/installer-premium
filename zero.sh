@@ -17,6 +17,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 YELLOW='\033[1;33m'
+WHITE='\033[37m'
 RESET='\033[0m'  # Reset warna teks ke default
 
 save_config() {
@@ -46,19 +47,40 @@ animate_text() {
 load_config
 
 clear
-echo -e "\033[31m"
-echo "╭━━━━┳━━━┳━━━┳━━━━╮"
-echo "╰━━╮━┃╭━━┫╭━╮┃╭╮╭╮┃"
-echo "╱╱╭╯╭┫╰━━┫╰━╯┃╭━━╮┃"
-echo "╱╭╯╭╯┃╭━━┫╭╮╭┫┃┃┃┃┃"
-echo "╭╯━╰━┫╰━━┫┃┃╰┫╰━━╯┃"
-echo "╰━━━━┻━━━┻╯╰━┻━━━━╯"
-echo -e "\033[0m"
-echo -e "${RED}𝗢𝗪𝗡𝗘𝗥${RESET}${BLUE}𝗗𝗘𝗩𝗘𝗟𝗢𝗣𝗘𝗥${RESET}"
-echo -e "\033[32mWHATSAPP ZERODEV : 081997715124\033[0m"
-echo -e "\033[31mTELEGRAM : t.me/ZerooHosting\033[0m"
-echo -e "${RED} © ZERO-DEVELOPER"
-echo ""
+echo -e "${CYAN}${BOLD}"
+echo "╔═══════════════════════════════════════════════════════════════════╗"
+echo "║                                                                   ║"
+echo "║                      __====-_  _-====__                           ║"
+echo "║                _--^^^#####//      \#####^^^--_                    ║"
+echo "║             _-^##########// (    ) \##########^-_                 ║"
+echo "║            -############//  |\^^/|  \############-                ║"
+echo "║          _/############//   (@::@)   \############\_              ║"
+echo "║         /#############((     \\//     ))#############\             ║"
+echo "║        -###############\\    (oo)    //###############-            ║"
+echo "║       -#################\\  / VV \  //#################-           ║"
+echo "║      -###################\\/      \//###################-          ║"
+echo "║     _#/|##########/\######(   /\   )######/\##########|\#_         ║"
+echo "║     |/ |#/\#/\#/\/  \#/\##\  |  |  /##/\#/  \/\#/\#/\#| \|         ║"
+echo "║     '  |/  V  V  '   V  \#\| |  | |/#/  V   '  V  V  \|  '         ║"
+echo "║        '   '  '      '   / | |  | | \   '      '  '   '            ║"
+echo "║                         (  | |  | |  )                             ║"
+echo "║                          \ | |  | | /                              ║"
+echo "║                           \| |  | |/                               ║"
+echo "║                            ' |  | '                                ║"
+echo "║                              \__/                                  ║"
+echo "║                                                                   ║"
+echo "╚═══════════════════════════════════════════════════════════════════╝"
+echo -e "${RESET}"
+
+# Info Kontak
+echo -e "${RED}${BOLD}"
+echo "╔══════════════════════════════════════════════════════╗"
+echo "║                    Developer Info                    ║"
+echo "╚══════════════════════════════════════════════════════╝"
+echo -e "${WHITE}OWNER  : ${ORANGE}ZERO-DEVELOPER"
+echo -e "${WHITE}WHATSAPP: ${ORANGE}081997715124"
+echo -e "${WHITE}TELEGRAM: ${ORANGE}t.me/ZerooHosting"
+echo -e "${RED}© 2025 Zero Developer${RESET}"
 
 # Tambahkan bagian lain dari skrip Anda di sini jika diperlukan
 # Fungsi untuk menampilkan animasi loading
@@ -108,181 +130,235 @@ loading_animation() {
 loading_animation
 echo -ne "\033[K"  # Menghapus teks loading dari baris
 
-echo "𝗧𝗛𝗘𝗠𝗘 ( 𝗙𝗜𝗟𝗘𝗦 )"
-echo "1. INSTALL THEME ELYSIUM PTERODACTYL"
-echo "𝗧𝗛𝗘𝗠𝗘 ( 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 ) "
-echo "2. INSTALL NEBULA THEME PTERODACTYL"
-echo "3. ADMIN PANEL THEME PTERODACTYL"
-echo "𝗔𝗗𝗗𝗢𝗡 ( 𝗙𝗜𝗟𝗘𝗦 )"
-echo "4. INSTALL ADDON AUTO SUSPEND PTERODACTYL"
-echo "5. INSTALL GOOGLE ANALITIC PTERODACTYL"
-echo "𝗧𝗛𝗘𝗠𝗘 ( 𝗥𝗘𝗠𝗔𝗞𝗘 ) "
-echo "6. ENIGMA PREMIUM PTERODACTYL REMAKE BY RAINSTOREID"
-echo "𝗣𝗧𝗘𝗥𝗢𝗗𝗔𝗖𝗧𝗬𝗟 ( 𝗘𝗗𝗜𝗧 )"
-echo "7. UBAH BACKROUND PTERODACTYL"
-echo "8. HAPUS BACKROUND PTERODACTYL (RESET BACKROUND JADI YANG AWAL)"
-echo "9. HAPUS THEME/ADDON"
-echo "𝗔𝗗𝗗𝗢𝗡 ( 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 )"
-echo "10. COOKIES PTERODACTYL"
-echo "𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗗𝗘𝗣𝗘𝗡𝗗 ( 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 )"
-echo "11. INSTALL DEPEND ADDON / THEME PLUGINS"
-echo "𝗜𝗡𝗦𝗧𝗔𝗟𝗟𝗘𝗥"
-echo "12. MATIKAN SEMUA ANIMASI INSTALLER (TIDAK BERLAKU DI WEB ANDA HANYA MEMATIKAN TEXT ANIMATION INSTALLER)"
-echo "13. KELUAR DARI INSTALLER"
-echo "𝗗𝗘𝗟𝗘𝗧𝗘 𝗧𝗛𝗘𝗠𝗘 / 𝗔𝗗𝗗𝗢𝗡 ( 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 )"
-echo "14. DELETE THEME NEBULA"
-echo "15. DELETE THEME SLATE"
-echo "16. DELETE THEME COOKIES"
-read -p "PILIH OPSI (1-16): " OPTION
+clear
+echo -e "${CYAN}${BOLD}"
+echo "──────────────────────────────────────────────"
+echo "         ⚙️  PTERODACTYL THEME INSTALLER"
+echo "──────────────────────────────────────────────${RESET}"
+echo
+echo -e "${WHITE}${BOLD}THEME (FILES)${RESET}"
+echo -e "${GREEN}1.${RESET} INSTALL THEME ELYSIUM PTERODACTYL"
+echo
+echo -e "${WHITE}${BOLD}THEME (PLUGINS)${RESET}"
+echo -e "${GREEN}2.${RESET} INSTALL NEBULA THEME PTERODACTYL"
+echo -e "${GREEN}3.${RESET} ADMIN PANEL THEME PTERODACTYL"
+echo
+echo -e "${WHITE}${BOLD}ADDON (FILES)${RESET}"
+echo -e "${GREEN}4.${RESET} INSTALL ADDON AUTO SUSPEND PTERODACTYL"
+echo -e "${GREEN}5.${RESET} INSTALL GOOGLE ANALYTIC PTERODACTYL"
+echo
+echo -e "${WHITE}${BOLD}THEME (REMAKE)${RESET}"
+echo -e "${GREEN}6.${RESET} ENIGMA PREMIUM PTERODACTYL REMAKE BY RAINSTOREID"
+echo
+echo -e "${WHITE}${BOLD}PTERODACTYL (EDIT)${RESET}"
+echo -e "${GREEN}7.${RESET} UBAH BACKGROUND PTERODACTYL"
+echo -e "${GREEN}8.${RESET} HAPUS BACKGROUND PTERODACTYL (RESET KE DEFAULT)"
+echo -e "${GREEN}9.${RESET} HAPUS THEME / ADDON"
+echo
+echo -e "${WHITE}${BOLD}ADDON (PLUGINS)${RESET}"
+echo -e "${GREEN}10.${RESET} COOKIES PTERODACTYL"
+echo
+echo -e "${WHITE}${BOLD}INSTALL DEPEND (PLUGINS)${RESET}"
+echo -e "${GREEN}11.${RESET} INSTALL DEPEND ADDON / THEME PLUGINS"
+echo
+echo -e "${WHITE}${BOLD}INSTALLER${RESET}"
+echo -e "${GREEN}12.${RESET} MATIKAN SEMUA ANIMASI INSTALLER"
+echo -e "${GREEN}13.${RESET} KELUAR DARI INSTALLER"
+echo
+echo -e "${WHITE}${BOLD}DELETE THEME / ADDON (PLUGINS)${RESET}"
+echo -e "${GREEN}14.${RESET} DELETE THEME NEBULA"
+echo -e "${GREEN}15.${RESET} DELETE THEME SLATE"
+echo -e "${GREEN}16.${RESET} DELETE THEME COOKIES"
+echo
+echo -e "${YELLOW}${BOLD}──────────────────────────────────────────────${RESET}"
+read -p "$(echo -e "${CYAN}${BOLD}PILIH OPSI (1-16): ${RESET}")" OPTION
 case "$OPTION" in
-    1)
-        # Masukkan token GitHub langsung di sini
-        GITHUB_TOKEN="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"
-
-        # Clone repositori menggunakan token
+     1)
+        GITHUB_TOKEN="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"
         REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
         TEMP_DIR="installer-premium"
 
-        # Mengkloning repositori
-        git clone "$REPO_URL"
+        git clone "https://${GITHUB_TOKEN}@github.com/KiwamiXq1031/installer-premium.git" "$TEMP_DIR"
 
         sudo mv "$TEMP_DIR/ElysiumTheme.zip" /var/www/
-
-        # Mengekstrak file ZIP dengan opsi untuk menggantikan file tanpa konfirmasi
         unzip -o /var/www/ElysiumTheme.zip -d /var/www/
-        rm -r installer-premium
-        rm /var/www/ElysiumTheme.zip
-        
-        # Menjalankan perintah
+        rm -rf "$TEMP_DIR"
+        rm -f /var/www/ElysiumTheme.zip
+
         sudo mkdir -p /etc/apt/keyrings
-
-        # Menyimpan output dan tidak meminta konfirmasi
         curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg || true
+        echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list > /dev/null
 
-        # Menambahkan repository
-        echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+        sudo apt update -y
+        sudo apt install -y nodejs npm
+        sudo npm install -g yarn
 
-        # Update dan install nodejs
-        sudo apt update
-        sudo apt install -y nodejs
-        apt install npm
-        npm i -g yarn
-        cd /var/www/pterodactyl
+        cd /var/www/pterodactyl || exit
         yarn
         yarn build:production
-        php artisan migrate
+        php artisan migrate --force
         php artisan view:clear
         animate_text "Tema Elysium berhasil diinstal."
         ;;
-    4)
-        # Masukkan token GitHub langsung di sini
-        GITHUB_TOKEN="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"
 
-        # Clone repositori menggunakan token
+     2)
+        cd /var/www
+        BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
+        if [ ! -f "$BLUEPRINT_FILE" ]; then
+            echo "𝗗𝗘𝗣𝗘𝗡𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗕𝗘𝗟𝗨𝗠 𝗗𝗜𝗜𝗡𝗦𝗧𝗔𝗟 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗧𝗘𝗥𝗟𝗘𝗕𝗜𝗛 𝗗𝗔𝗛𝗨𝗟𝗨 𝗗𝗘𝗡𝗚𝗔𝗡 𝗠𝗘𝗠𝗜𝗟𝗜𝗛 𝗢𝗣𝗦𝗜 𝗡𝗢 𝟭𝟭"
+            exit 1
+        fi
+
+        GITHUB_TOKEN="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"
         REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
         TEMP_DIR="installer-premium"
 
-        # Mengkloning repositori
-        git clone "$REPO_URL"
+        git clone "https://${GITHUB_TOKEN}@github.com/KiwamiXq1031/installer-premium.git" "$TEMP_DIR"
+
+        sudo mv "$TEMP_DIR/nebulaptero.zip" /var/www/
+        unzip -o /var/www/nebulaptero.zip -d /var/www/
+        cd /var/www/pterodactyl || exit
+        bash blueprint.sh -install nebula
+
+        cd /var/www
+        rm -rf "$TEMP_DIR"
+        rm -f nebulaptero.zip
+        cd /var/www/pterodactyl
+        rm -f nebula.blueprint
+
+        animate_text "NEBULA THEME BERHASIL DIINSTALL"
+        ;;
+     3)
+        cd /var/www
+        BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
+        if [ ! -f "$BLUEPRINT_FILE" ]; then
+            echo "𝗗𝗘𝗣𝗘𝗡𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗕𝗘𝗟𝗨𝗠 𝗗𝗜𝗜𝗡𝗦𝗧𝗔𝗟 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗧𝗘𝗥𝗟𝗘𝗕𝗜𝗛 𝗗𝗔𝗛𝗨𝗟𝗨 𝗗𝗘𝗡𝗚𝗔𝗡 𝗠𝗘𝗠𝗜𝗟𝗜𝗛 𝗢𝗣𝗦𝗜 𝗡𝗢 𝟭𝟭"
+            exit 1
+        fi
+
+        GITHUB_TOKEN="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"
+        REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
+        TEMP_DIR="installer-premium"
+
+        git clone "https://${GITHUB_TOKEN}@github.com/KiwamiXq1031/installer-premium.git" "$TEMP_DIR"
+
+        sudo mv "$TEMP_DIR/Slate-v1.0.zip" /var/www/
+        unzip -o /var/www/Slate-v1.0.zip -d /var/www/
+        cd /var/www/pterodactyl || exit
+        bash blueprint.sh -install slate
+
+        cd /var/www
+        rm -rf "$TEMP_DIR"
+        rm -f Slate-v1.0.zip
+
+        FILE_URL="https://github.com/KiwamiXq1031/installer-premium/raw/main/Slate-v1.0.zip"
+        DESTINATION="/var/www/pterodactyl/Slate-v1.0.zip"
+
+        curl -H "Authorization: Bearer ${GITHUB_TOKEN}" -L -o "${DESTINATION}" "${FILE_URL}" > /dev/null 2>&1
+
+        if [ $? -eq 0 ]; then
+            animate_text "File berhasil diunduh ke ${DESTINATION}"
+        else
+            animate_text "Gagal mengunduh file"
+        fi
+
+        animate_text "ADMIN PANEL THEME BERHASIL DIINSTALL"
+        ;;
+        
+             4)
+        GITHUB_TOKEN="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"
+        REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
+        TEMP_DIR="installer-premium"
+
+        git clone "https://${GITHUB_TOKEN}@github.com/KiwamiXq1031/installer-premium.git" "$TEMP_DIR"
 
         sudo mv "$TEMP_DIR/autosuspens.zip" /var/www/
-
-        # Mengekstrak file ZIP dengan opsi untuk menggantikan file tanpa konfirmasi
         unzip -o /var/www/autosuspens.zip -d /var/www/
-        rm -r installer-premium
-        rm /var/www/autosuspens.zip
+        rm -rf "$TEMP_DIR"
+        rm -f /var/www/autosuspens.zip
         
-        cd /var/www/pterodactyl
+        cd /var/www/pterodactyl || exit
         bash installer.bash
-
         animate_text "AUTO SUSPEND BERHASIL DIINSTALL"
 
-        # Ganti dengan token dan URL file
-        FILE_URL="https://raw.githubusercontent.com/username/repo/main/path/to/file"
-        DESTINATION="/var/www/pterodactyl/filename"
+        FILE_URL="https://github.com/KiwamiXq1031/installer-premium/raw/main/autosuspens.zip"
+        DESTINATION="/var/www/pterodactyl/autosuspens.zip"
 
-        # Mengunduh file dengan token
-        curl -H "Authorization: token ${GITHUB_TOKEN}" -L -o "${DESTINATION}" "${FILE_URL}"
+        curl -H "Authorization: Bearer ${GITHUB_TOKEN}" -L -o "${DESTINATION}" "${FILE_URL}"
 
-        # Informasi hasil
         if [ $? -eq 0 ]; then
             animate_text "File berhasil diunduh ke ${DESTINATION}"
         else
             animate_text "Gagal mengunduh file"
         fi
         ;;
+     5)
+    # Token GitHub pribadi (pastikan token valid dan punya akses repo)
+    GITHUB_TOKEN="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"
 
-    2)
-    
-cd /var/www
-BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
-if [ ! -f "$BLUEPRINT_FILE" ]; then
-    echo "𝗗𝗘𝗣𝗘𝗡𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗕𝗘𝗟𝗨𝗠 𝗗𝗜𝗜𝗡𝗦𝗧𝗔𝗟 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗧𝗘𝗥𝗟𝗘𝗕𝗜𝗛 𝗗𝗔𝗛𝗨𝗟𝗨 𝗗𝗘𝗡𝗚𝗔𝗡 𝗠𝗘𝗠𝗜𝗟𝗜𝗛 𝗢𝗣𝗦𝗜 𝗡𝗢 𝟭𝟭"
-    exit 1
-fi
-
-# Masukkan token GitHub langsung di sini
-    GITHUB_TOKEN="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"
-
-    # Clone repositori menggunakan token
+    # URL repo dan folder sementara
     REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
     TEMP_DIR="installer-premium"
 
-    # Mengkloning repositori
-    git clone "$REPO_URL"
+    echo -e "${BLUE}🔄 Mengunduh addon Google Analytics dari GitHub...${RESET}"
+    git clone "$REPO_URL" "$TEMP_DIR" || {
+        echo -e "${RED}❌ Gagal mengkloning repository.${RESET}"
+        exit 1
+    }
 
-    sudo mv "$TEMP_DIR/nebulaptero.zip" /var/www/
-    unzip -o /var/www/nebulaptero.zip -d /var/www/
-    cd /var/www/pterodactyl && blueprint -install nebula
-  cd /var/www/ && rm -r installer-premium
-  cd /var/www/ && rm -r nebulaptero.zip
-cd /var/www/pterodactyl && rm -r nebula.blueprint
-echo "NEBULA THEME BERHASIL DI INSTALL"
+    # Pindahkan dan ekstrak file
+    sudo mv "$TEMP_DIR/googleanalitic.zip" /var/www/
+    unzip -o /var/www/googleanalitic.zip -d /var/www/ >/dev/null 2>&1
+    rm -rf "$TEMP_DIR" /var/www/googleanalitic.zip
+
+    # Setup Node.js dan Yarn
+    echo -e "${BLUE}⚙️ Menginstal Node.js 20.x dan Yarn...${RESET}"
+    sudo mkdir -p /etc/apt/keyrings
+    curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | \
+        sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | \
+        sudo tee /etc/apt/sources.list.d/nodesource.list
+
+    sudo apt update -y
+    sudo apt install -y nodejs npm
+    npm install -g yarn
+
+    # Build ulang panel
+    cd /var/www/pterodactyl || exit
+    yarn install
+    yarn build:production
+
+    echo -e "${BLUE}⚙️ Menjalankan Artisan Command...${RESET}"
+    php artisan migrate --force
+    php artisan view:clear
+
+    echo -e "${GREEN}✅ Addon Google Analytics berhasil diinstal!${RESET}"
+
+    # Unduh file tambahan dari GitHub pakai header Authorization Bearer
+    FILE_URL="https://raw.githubusercontent.com/KiwamiXq1031/installer-premium/main/addons/googleanalytic/config.json"
+    DESTINATION="/var/www/pterodactyl/config/googleanalytic.json"
+
+    echo -e "${BLUE}📦 Mengunduh file konfigurasi tambahan...${RESET}"
+    curl -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+         -H "Accept: application/vnd.github.v3.raw" \
+         -L -o "${DESTINATION}" "${FILE_URL}"
+
+    if [ $? -eq 0 ]; then
+        echo -e "${GREEN}✅ File berhasil diunduh ke ${DESTINATION}${RESET}"
+    else
+        echo -e "${RED}❌ Gagal mengunduh file konfigurasi.${RESET}"
+    fi
     ;;
-     3)
-cd /var/www
-BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
-if [ ! -f "$BLUEPRINT_FILE" ]; then
-    echo "𝗗𝗘𝗣𝗘𝗡𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗕𝗘𝗟𝗨𝗠 𝗗𝗜𝗜𝗡𝗦𝗧𝗔𝗟 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗧𝗘𝗥𝗟𝗘𝗕𝗜𝗛 𝗗𝗔𝗛𝗨𝗟𝗨 𝗗𝗘𝗡𝗚𝗔𝗡 𝗠𝗘𝗠𝗜𝗟𝗜𝗛 𝗢𝗣𝗦𝗜 𝗡𝗢 𝟭𝟭"
-    exit 1
-fi
-# Masukkan token GitHub langsung di sini
-    GITHUB_TOKEN="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"
 
-    # Clone repositori menggunakan token
-    REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
-    TEMP_DIR="installer-premium"
-
-    # Mengkloning repositori
-    git clone "$REPO_URL"
-
-    cd /var/ww/pterodactyl && bash blueprint.sh
-    sudo mv "$TEMP_DIR/Slate-v1.0.zip" /var/www/
-    unzip -o /var/www/Slate-v1.0.zip -d /var/www/
-    cd /var/www/pterodactyl && blueprint -install slate
-  cd /var/www/ && rm -r installer-premium
-  cd /var/www/ && rm -r Slate-v1.0.zip
-# URL dan lokasi file
-FILE_URL="https://raw.githubusercontent.com/"
-DESTINATION="/var/www/pterodactyl"
-
-# Mengunduh file dengan menyembunyikan output dan error
-curl -H "Authorization: token ${GITHUB_TOKEN}" -L -o "${DESTINATION}" "${FILE_URL}" > /dev/null 2>&1
-
-# Informasi hasil
-if [ $? -eq 0 ]; then
-    echo "File berhasil diunduh ke ${DESTINATION}" > /dev/null 2>&1
-else
-    echo "Gagal mengunduh file" > /dev/null 2>&1
-fi
-    ;;
-    6)
+     6)
 
 # Fungsi untuk menampilkan animasi loading
 show_loading() {
     echo -n "[-] LOADING"
     for i in {1..3}; do
         echo -n "."
+        sleep 0.5
     done
     echo ""
 }
@@ -293,66 +369,72 @@ show_loading
 # Nomor lama yang akan digunakan secara otomatis
 nomor_lama="081997715124"
 echo -e "${BLUE}JIKA ADA PILIHAN SILAHKAN KETIK y${RESET}"
+
+# Persiapan environment
 sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | \
+    sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | \
+    sudo tee /etc/apt/sources.list.d/nodesource.list
+
+sudo apt-get update -y
 sudo apt-get install -y nodejs npm zip unzip git curl wget
 npm i -g yarn
-cd /var/www/pterodactyl
+
+# Build ulang Pterodactyl panel
+cd /var/www/pterodactyl || exit
 yarn
-cd /var/www/
-# Masukkan token GitHub langsung di sini
-GITHUB_TOKEN="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"
+cd /var/www/ || exit
+
+# Masukkan token GitHub (gunakan ghp_)
+GITHUB_TOKEN="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"
 
 # Clone repositori menggunakan token
 REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
 TEMP_DIR="installer-premium"
 
-# Mengkloning repositori
-git clone "$REPO_URL" "$TEMP_DIR"
+echo "[-] Mengkloning repositori dari GitHub..."
+git clone "https://${GITHUB_TOKEN}@github.com/KiwamiXq1031/installer-premium.git" "$TEMP_DIR"
 
 # Pindahkan dan ekstrak file zip
-cd "$TEMP_DIR"
+cd "$TEMP_DIR" || exit
 sudo mv enigmarimake.zip /var/www/
-cd /var/www/
-unzip -o enigmarimake.zip -d /var/www/
-rm -r "$TEMP_DIR" enigmarimake.zip
-cd /var/www/pterodactyl && npx update-browserslist-db@latest && yarn build:production
+cd /var/www/ || exit
 
-echo "PROSES SELESAI"
+unzip -o enigmarimake.zip -d /var/www/
+rm -rf "$TEMP_DIR" enigmarimake.zip
+
+# Build ulang panel
+cd /var/www/pterodactyl || exit
+npx update-browserslist-db@latest
+yarn build:production
+
+echo ""
+echo -e "${GREEN}PROSES SELESAI ✅${RESET}"
 ;;
      7)
 # Default URL gambar
 DEFAULT_URL="https://i.postimg.cc/s2wGzpHs/zerodev.jpg"
 
-# Meminta input URL gambar dari pengguna
+# Input URL manual
 read -p "Masukkan URL gambar (tekan Enter untuk menggunakan URL default): " USER_URL
 
-# Jika input kosong, gunakan URL default
+# Gunakan default kalau kosong
 if [ -z "$USER_URL" ]; then
     URL="$DEFAULT_URL"
 else
     URL="$USER_URL"
 fi
 
-# Masuk ke direktori yang diinginkan
+# Pindah ke direktori template Pterodactyl
 cd /var/www/pterodactyl/resources/views/templates || exit
 
-# Cek jika file wrapper.blade.php mengandung kode CSS tertentu
-if grep -q 'background-image' wrapper.blade.php; then
-    echo "APAKAH ANDA SUDAH MENGHAPUS BACKGROUND ANDA SEBELUM MEMASANG?"
-    read -p "JIKA BELUM PERNAH / SUDAH Ketik y, JIKA BELUM KETIK n: " CONFIRM
+# Backup dulu sebelum ubah
+cp wrapper.blade.php wrapper_backup_$(date +"%Y%m%d%H%M%S").blade.php
 
-    if [ "$CONFIRM" != "y" ]; then
-        echo -e "${RED}SILAHKAN HAPUS TERLEBIH DAHULU${RESET}"
-        exit 1
-    fi
-fi
-
-# Tambahkan kode CSS di bagian atas file wrapper.blade.php
+# Buat file baru dengan HTML + CSS full
 {
-  # Menyimpan konten baru yang akan ditambahkan
   echo '<!DOCTYPE html>'
   echo '<html lang="en">'
   echo '<head>'
@@ -360,57 +442,40 @@ fi
   echo '    <meta name="viewport" content="width=device-width, initial-scale=1.0">'
   echo '    <title>Pterodactyl Background</title>'
   echo '    <style>'
+  echo '        * { margin: 0; padding: 0; box-sizing: border-box; }'
   echo "        body {"
   echo "            background-image: url('$URL');"
   echo '            background-size: cover;'
   echo '            background-repeat: no-repeat;'
   echo '            background-attachment: fixed;'
-  echo '            margin: 0;'
-  echo '            padding: 0;'
+  echo '            height: 100vh;'
+  echo '            width: 100vw;'
   echo '        }'
   echo '    </style>'
   echo '</head>'
   echo '<body>'
-  echo '    <!-- Konten lain di sini -->'
+  echo '    <!-- Template original dimulai di bawah -->'
+  cat wrapper.blade.php
   echo '</body>'
   echo '</html>'
-  echo ''
-  
-  # Tambahkan isi file wrapper.blade.php yang ada sebelumnya
-  cat wrapper.blade.php
 } > /tmp/new_wrapper.blade.php
 
-# Salin file baru ke tempat file lama
+# Timpa file lama
 mv /tmp/new_wrapper.blade.php wrapper.blade.php
 
-echo -e "${BLUE}BACKGROUND BERHASIL DI GANTI${RESET}"
-    ;;
-     9)
-        echo "HAPUS THEME/ADDON DIPILIH"
-        # Contoh perintah untuk menghapus tema/addon
-       
-       cd /var/www/pterodactyl
- php artisan down
-curl -L https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz | tar -xzv 
-
-chmod -R 755 storage/* bootstrap/cache 
- 
-composer install --no-dev --optimize-autoloader
-
-php artisan view:clear
-
-php artisan config:clear
-
-php artisan migrate --seed --force
-chown -R www-data:www-data /var/www/pterodactyl/*
-php artisan up
-        echo "Semua tema dan addon telah dihapus."
-        ;;
-    8)
-# Path ke file yang akan diubah
+echo "BACKGROUND BERHASIL DIGANTI ✅"
+;;
+8)
+# Path ke file wrapper Pterodactyl
 file_path="/var/www/pterodactyl/resources/views/templates/wrapper.blade.php"
 
-# Konten baru untuk file
+# Pastikan direktori ada
+if [ ! -f "$file_path" ]; then
+    echo "File wrapper.blade.php tidak ditemukan!"
+    exit 1
+fi
+
+# Ganti isi file wrapper.blade.php dengan template asli bawaan Pterodactyl
 cat << 'EOF' > "$file_path"
 <!DOCTYPE html>
 <html>
@@ -451,7 +516,6 @@ cat << 'EOF' > "$file_path"
         </style>
 
         @yield('assets')
-
         @include('layouts.scripts')
 
         <!-- Google tag (gtag.js) -->
@@ -460,7 +524,6 @@ cat << 'EOF' > "$file_path"
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', '{{ config('app.google_analytics', 'Pterodactyl') }}');
         </script>
     </head>
@@ -477,130 +540,165 @@ cat << 'EOF' > "$file_path"
 </html>
 EOF
 
-# Memeriksa apakah penggantian berhasil
 if [ $? -eq 0 ]; then
-    echo "BACKROUND ANDA BERHASIL DI HAPUS"
+    echo "BACKGROUND BERHASIL DIHAPUS ✅"
 else
-    echo "TERJADI KESALAHAN SAAT MEMPERBARUI FILE!! SILAHKAN HUBUNGI 085664731916 UNTUK MEMINTA BANTUAN"
+    echo "GAGAL MENGGANTI FILE! Hubungi 081997715124 untuk bantuan."
 fi
- ;;
-    5)
-     # Masukkan token GitHub langsung di sini
-        GITHUB_TOKEN="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"
+;;
 
-        # Clone repositori menggunakan token
-        REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
-        TEMP_DIR="installer-premium"
+    9)
+echo "🧹 Menghapus semua theme dan addon..."
+cd /var/www/pterodactyl || exit 1
 
-        # Mengkloning repositori
-        git clone "$REPO_URL"
+# Maintenance mode
+php artisan down
 
-        sudo mv "$TEMP_DIR/googleanalitic.zip" /var/www/
+# Ambil panel versi terbaru langsung dari GitHub Pterodactyl
+curl -L https://github.com/pterodactyl/panel/releases/latest/download/panel.tar.gz | tar -xzv
 
-        # Mengekstrak file ZIP dengan opsi untuk menggantikan file tanpa konfirmasi
-        unzip -o /var/www/googleanalitic.zip -d /var/www/
-        rm -r installer-premium
-        rm /var/www/googleanalitic.zip
-        
-        # Menjalankan perintah
-        sudo mkdir -p /etc/apt/keyrings
+# Set izin file dan cache
+chmod -R 755 storage/* bootstrap/cache
+composer install --no-dev --optimize-autoloader
 
-        # Menyimpan output dan tidak meminta konfirmasi
-        curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg || true
+php artisan view:clear
+php artisan config:clear
+php artisan migrate --seed --force
 
-        # Menambahkan repository
-        echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+# Reset permission
+chown -R www-data:www-data /var/www/pterodactyl/*
 
-        # Update dan install nodejs
-        sudo apt update
-        sudo apt install -y nodejs
-        apt install npm
-        echo -e "${BLUE} JIKA INSTALL NPM ERROR TETAP AKAN WORK, LANJUTKAN SAJA"
-        npm i -g yarn
-        cd /var/www/pterodactyl
-        yarn
-        yarn build:production
-echo -e "${BLUE} KETIK yes UNTUK MELANJUTKAN${RESET}"
-        php artisan migrate
-        php artisan view:clear
-        echo -e "${BLUE}ADDON GOOGLE ANALITYC BERHASIL DIINSTAL${RESET}"
+# Kembali online
+php artisan up
 
-        # Ganti dengan token dan URL file
-        FILE_URL="https://raw.githubusercontent.com/username/repo/main/path/to/file"
-        DESTINATION="/var/www/pterodactyl/filename"
+echo "✅ Semua theme dan addon berhasil dihapus dan panel telah dipulihkan ke versi original."
+;;
+    
+10)
+cd /var/www/ || exit
 
-        # Mengunduh file dengan token
-        curl -H "Authorization: token ${GITHUB_TOKEN}" -L -o "${DESTINATION}" "${FILE_URL}"
-
-        # Informasi hasil
-        if [ $? -eq 0 ]; then
-            animate_text "File berhasil diunduh ke ${DESTINATION}"
-        else
-            animate_text "Gagal mengunduh file"
-        fi
-        ;;
-        10)
-cd /var/www/
-# Mengecek keberadaan file blueprint.sh
+# Ngecek dependensi blueprint
 BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
 if [ ! -f "$BLUEPRINT_FILE" ]; then
-    echo "𝗗𝗘𝗣𝗘𝗡𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗕𝗘𝗟𝗨𝗠 𝗗𝗜𝗜𝗡𝗦𝗧𝗔𝗟 𝗦𝗜𝗟𝗔𝗛𝗞𝗔𝗡 𝗜𝗡𝗦𝗧𝗔𝗟𝗟 𝗧𝗘𝗥𝗟𝗘𝗕𝗜𝗛 𝗗𝗔𝗛𝗨𝗟𝗨 𝗗𝗘𝗡𝗚𝗔𝗡 𝗠𝗘𝗠𝗜𝗟𝗜𝗛 𝗢𝗣𝗦𝗜 𝗡𝗢 𝟭𝟭"
+    echo -e "❌ 𝗗𝗘𝗣𝗘𝗡𝗗 𝗣𝗟𝗨𝗚𝗜𝗡𝗦 𝗕𝗘𝗟𝗨𝗠 𝗗𝗜𝗜𝗡𝗦𝗧𝗔𝗟.\n👉 Silakan install dulu lewat opsi nomor 11."
     exit 1
 fi
 
-# Masukkan token GitHub langsung di sini
-GITHUB_TOKEN="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"
+# Supaya script stop kalau ada error
+set -e
 
-# Clone repositori menggunakan token
+# Token GitHub pribadi
+GITHUB_TOKEN="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"
+
+# Repo dan direktori sementara
 REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
 TEMP_DIR="installer-premium"
 
-# Mengkloning repositori
-git clone "$REPO_URL"
+echo -e "🔄 Mengunduh addon Cookies dari GitHub..."
+git clone "$REPO_URL" "$TEMP_DIR" >/dev/null 2>&1 || {
+    echo -e "❌ Gagal mengkloning repository."
+    exit 1
+}
 
-sudo mv "$TEMP_DIR/cookies.zip" /var/www/pterodactyl
-unzip -o /var/www/pterodactyl/cookies.zip -d /var/www/pterodactyl
-cd /var/www/pterodactyl && blueprint -install cookies
-cd /var/www/ && rm -r installer-premium
-cd /var/www/pterodactyl && rm -r cookies.zip
-cd /var/www/pterodactyl && rm -r cookies.blueprint
-echo "ADDON COOKIES BERHASIL DI INSTALL"
+# Pindahkan dan ekstrak zip
+sudo mv "$TEMP_DIR/cookies.zip" /var/www/pterodactyl/
+unzip -o /var/www/pterodactyl/cookies.zip -d /var/www/pterodactyl/ >/dev/null 2>&1
 
-# URL dan lokasi file
-FILE_URL="https://raw.githubusercontent.com/"
-DESTINATION="/var/www/pterodactyl"
+# Install addon cookies
+cd /var/www/pterodactyl || exit
+bash blueprint.sh -install cookies >/dev/null 2>&1 || {
+    echo -e "⚠️  Gagal menjalankan blueprint install cookies."
+    exit 1
+}
 
-# Mengunduh file dengan menyembunyikan output dan error
-curl -H "Authorization: token ${GITHUB_TOKEN}" -L -o "${DESTINATION}" "${FILE_URL}" > /dev/null 2>&1
+# Bersih-bersih file sisa
+rm -rf /var/www/installer-premium \
+       /var/www/pterodactyl/cookies.zip \
+       /var/www/pterodactyl/cookies.blueprint
 
-# Informasi hasil
+echo -e "✅ ADDON COOKIES BERHASIL DIINSTAL"
+
+# Unduh file tambahan dari GitHub (jika ada)
+FILE_URL="https://raw.githubusercontent.com/KiwamiXq1031/installer-premium/main/addons/cookies/config.json"
+DESTINATION="/var/www/pterodactyl/config/cookies.json"
+
+echo -e "📦 Mengunduh file konfigurasi tambahan..."
+curl -s -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+         -H "Accept: application/vnd.github.v3.raw" \
+         -L -o "${DESTINATION}" "${FILE_URL}"
+
 if [ $? -eq 0 ]; then
-    echo "File berhasil diunduh ke ${DESTINATION}" > /dev/null 2>&1
+    echo -e "✅ File berhasil diunduh ke ${DESTINATION}"
 else
-    echo "Gagal mengunduh file" > /dev/null 2>&1
+    echo -e "❌ Gagal mengunduh file konfigurasi tambahan."
 fi
 ;;
-   11)
-     sudo apt-get install -y ca-certificates curl gnupg
+11)
+set -e
+
+echo -e "🔧 Menginstal dependensi dasar..."
+sudo apt-get install -y ca-certificates curl gnupg unzip zip git wget >/dev/null 2>&1
+
+echo -e "📦 Menambahkan repository Node.js 20.x..."
 sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
-apt-get update
-apt-get install -y nodejs
-npm i -g yarn
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg >/dev/null 2>&1
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" \
+  | sudo tee /etc/apt/sources.list.d/nodesource.list >/dev/null
+
+sudo apt-get update -y >/dev/null
+sudo apt-get install -y nodejs >/dev/null 2>&1
+
+echo -e "⚙️  Menginstal Yarn dan dependensi proyek..."
+npm install -g yarn >/dev/null 2>&1
+cd /var/www/pterodactyl || { echo "❌ Direktori Pterodactyl tidak ditemukan!"; exit 1; }
+yarn >/dev/null 2>&1
+yarn add cross-env >/dev/null 2>&1
+
+echo -e "🌐 Mengunduh Blueprint Framework versi terbaru..."
+LATEST_URL=$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest \
+  | grep 'browser_download_url' | cut -d '"' -f 4 | head -n 1)
+
+if [ -z "$LATEST_URL" ]; then
+    echo "❌ Gagal mengambil URL rilis terbaru dari GitHub."
+    exit 1
+fi
+
+wget "$LATEST_URL" -O /var/www/pterodactyl/release.zip >/dev/null 2>&1
 cd /var/www/pterodactyl
-yarn
-yarn add cross-env
-apt install -y zip unzip git curl wget
-wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
-mv release.zip var/www/pterodactyl/release.zip
-cd /var/www/pterodactyl
-unzip release.zip
-WEBUSER="www-data"; USERSHELL="/bin/bash"; PERMISSIONS="www-data:www-data";
-sed -i -E -e "s|WEBUSER=\"www-data\" #;|WEBUSER=\"$WEBUSER\" #;|g" -e "s|USERSHELL=\"/bin/bash\" #;|USERSHELL=\"$USERSHELL\" #;|g" -e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$PERMISSIONS\" #;|g" $FOLDER/blueprint.sh
-chmod +x blueprint.sh
-bash blueprint.sh
-        ;;
+
+echo -e "📂 Mengekstrak Blueprint Framework..."
+unzip -o release.zip >/dev/null 2>&1
+rm -f release.zip
+
+# Menentukan variabel untuk konfigurasi
+WEBUSER="www-data"
+USERSHELL="/bin/bash"
+PERMISSIONS="www-data:www-data"
+FOLDER="/var/www/pterodactyl"
+
+# Pastikan file blueprint.sh ada
+if [ ! -f "$FOLDER/blueprint.sh" ]; then
+    echo "❌ File blueprint.sh tidak ditemukan setelah ekstraksi!"
+    exit 1
+fi
+
+echo -e "🧩 Mengatur konfigurasi blueprint.sh..."
+sed -i -E \
+    -e "s|WEBUSER=\"www-data\" #;|WEBUSER=\"$WEBUSER\" #;|g" \
+    -e "s|USERSHELL=\"/bin/bash\" #;|USERSHELL=\"$USERSHELL\" #;|g" \
+    -e "s|OWNERSHIP=\"www-data:www-data\" #;|OWNERSHIP=\"$PERMISSIONS\" #;|g" \
+    "$FOLDER/blueprint.sh"
+
+chmod +x "$FOLDER/blueprint.sh"
+
+echo -e "🚀 Menjalankan Blueprint Framework..."
+bash "$FOLDER/blueprint.sh" >/dev/null 2>&1 || {
+    echo "⚠️  Blueprint berhasil diinstal, tapi terjadi peringatan saat eksekusi."
+}
+
+echo -e "✅ Blueprint Framework berhasil diinstal dan dikonfigurasi!"
+;;
     12)
         DISABLE_ANIMATIONS=1
         save_config
