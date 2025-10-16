@@ -138,40 +138,47 @@ echo "────────────────────────�
 echo
 echo -e "${WHITE}${BOLD}THEME (FILES)${RESET}"
 echo -e "${GREEN}1.${RESET} INSTALL THEME ELYSIUM PTERODACTYL"
+echo -e "${GREEN}2. INSTALL THEME STELLAR"
+echo -e "${GREEN}3. INSTALL THEME BILLING"
 echo
 echo -e "${WHITE}${BOLD}THEME (PLUGINS)${RESET}"
-echo -e "${GREEN}2.${RESET} INSTALL NEBULA THEME PTERODACTYL"
-echo -e "${GREEN}3.${RESET} ADMIN PANEL THEME PTERODACTYL"
+echo -e "${GREEN}4.${RESET} INSTALL NEBULA THEME PTERODACTYL"
+echo -e "${GREEN}5.${RESET} ADMIN PANEL THEME PTERODACTYL"
 echo
 echo -e "${WHITE}${BOLD}ADDON (FILES)${RESET}"
-echo -e "${GREEN}4.${RESET} INSTALL ADDON AUTO SUSPEND PTERODACTYL"
-echo -e "${GREEN}5.${RESET} INSTALL GOOGLE ANALYTIC PTERODACTYL"
+echo -e "${GREEN}6.${RESET} INSTALL ADDON AUTO SUSPEND PTERODACTYL"
+echo -e "${GREEN}7.${RESET} INSTALL GOOGLE ANALYTIC PTERODACTYL"
 echo
 echo -e "${WHITE}${BOLD}THEME (REMAKE)${RESET}"
-echo -e "${GREEN}6.${RESET} ENIGMA PREMIUM PTERODACTYL REMAKE BY RAINSTOREID"
+echo -e "${GREEN}8.${RESET} ENIGMA PREMIUM PTERODACTYL REMAKE BY RAINSTOREID"
 echo
 echo -e "${WHITE}${BOLD}PTERODACTYL (EDIT)${RESET}"
-echo -e "${GREEN}7.${RESET} UBAH BACKGROUND PTERODACTYL"
-echo -e "${GREEN}8.${RESET} HAPUS BACKGROUND PTERODACTYL (RESET KE DEFAULT)"
-echo -e "${GREEN}9.${RESET} HAPUS THEME / ADDON"
+echo -e "${GREEN}9.${RESET} UBAH BACKGROUND PTERODACTYL"
+echo -e "${GREEN}10.${RESET} HAPUS BACKGROUND PTERODACTYL (RESET KE DEFAULT)"
+echo -e "${GREEN}11.${RESET} HAPUS THEME / ADDON"
 echo
 echo -e "${WHITE}${BOLD}ADDON (PLUGINS)${RESET}"
-echo -e "${GREEN}10.${RESET} COOKIES PTERODACTYL"
+echo -e "${GREEN}12.${RESET} COOKIES PTERODACTYL"
 echo
 echo -e "${WHITE}${BOLD}INSTALL DEPEND (PLUGINS)${RESET}"
-echo -e "${GREEN}11.${RESET} INSTALL DEPEND ADDON / THEME PLUGINS"
+echo -e "${GREEN}13.${RESET} INSTALL DEPEND ADDON / THEME PLUGINS"
 echo
 echo -e "${WHITE}${BOLD}INSTALLER${RESET}"
-echo -e "${GREEN}12.${RESET} MATIKAN SEMUA ANIMASI INSTALLER"
-echo -e "${GREEN}13.${RESET} KELUAR DARI INSTALLER"
+echo -e "${GREEN}14.${RESET} MATIKAN SEMUA ANIMASI INSTALLER"
+echo -e "${GREEN}15.${RESET} KELUAR DARI INSTALLER"
 echo
 echo -e "${WHITE}${BOLD}DELETE THEME / ADDON (PLUGINS)${RESET}"
-echo -e "${GREEN}14.${RESET} DELETE THEME NEBULA"
-echo -e "${GREEN}15.${RESET} DELETE THEME SLATE"
-echo -e "${GREEN}16.${RESET} DELETE THEME COOKIES"
+echo -e "${GREEN}16.${RESET} DELETE THEME NEBULA"
+echo -e "${GREEN}17.${RESET} DELETE THEME SLATE"
+echo -e "${GREEN}18.${RESET} DELETE THEME COOKIES"
 echo
+echo -e "${WHITE}${BOLD}PROTECT PTERODACTYL${RESET}"
+echo -e "${GREEN}19.${RESET} PASANG PROTECT & BUILD PANEL"
+echo -e "${GREEN}20.${RESET} RESTORE DARI BACKUP DAN BUILD"
+echo -e "${GREEN}21.${RESET} INSTALL PROTECT"
+echo -e "${GREEN}22.${RESET} RESTORE"
 echo -e "${YELLOW}${BOLD}──────────────────────────────────────────────${RESET}"
-read -p "$(echo -e "${CYAN}${BOLD}PILIH OPSI (1-16): ${RESET}")" OPTION
+read -p "$(echo -e "${CYAN}${BOLD}PILIH OPSI (1-20): ${RESET}")" OPTION
 case "$OPTION" in
      1)
         GITHUB_TOKEN="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"
@@ -200,8 +207,81 @@ case "$OPTION" in
         php artisan view:clear
         animate_text "Tema Elysium berhasil diinstal."
         ;;
-
      2)
+        clear
+        echo -e "${BLUE}[+] =============================================== [+]${NC}"
+        echo -e "${BLUE}[+]        INSTALL THEME PTERODACTYL - STELLAR      [+]${NC}"
+        echo -e "${BLUE}[+] =============================================== [+]${NC}"
+
+        THEME_NAME="stellar"
+        THEME_URL="https://github.com/KiwamiXq1031/installer-premium/raw/main/${THEME_NAME}.zip"
+
+        echo -e "${YELLOW}🔽 Mengunduh theme Stellar...${NC}"
+        wget -q -O "/root/${THEME_NAME}.zip" "$THEME_URL" || { echo -e "${RED}❌ Gagal mengunduh theme.${NC}"; exit 1; }
+
+        echo -e "${YELLOW}📦 Mengekstrak file...${NC}"
+        unzip -oq "/root/${THEME_NAME}.zip" -d /root/pterodactyl
+
+        echo -e "${YELLOW}📁 Menyalin file ke direktori Pterodactyl...${NC}"
+        sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+
+        echo -e "${YELLOW}⚙️ Menginstal Node.js v20 & Yarn...${NC}"
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        sudo apt install -y nodejs
+        sudo npm install -g yarn
+
+        cd /var/www/pterodactyl || { echo -e "${RED}❌ Direktori tidak ditemukan!${NC}"; exit 1; }
+
+        echo -e "${YELLOW}🔧 Menjalankan migrasi dan build...${NC}"
+        yarn add react-feather
+        php artisan migrate --force
+        yarn build:production
+        php artisan view:clear
+
+        echo -e "${YELLOW}🧹 Membersihkan file sementara...${NC}"
+        rm -f "/root/${THEME_NAME}.zip"
+        rm -rf /root/pterodactyl
+
+        echo -e "${GREEN}✅ Theme Stellar berhasil diinstall menggunakan Node.js v20!${NC}"
+        ;;
+     3)
+        clear
+        echo -e "${BLUE}[+] =============================================== [+]${NC}"
+        echo -e "${BLUE}[+]            INSTALL THEME PTERODACTYL - BILLING  [+]${NC}"
+        echo -e "${BLUE}[+] =============================================== [+]${NC}"
+
+        THEME_NAME="billing"
+        THEME_URL="https://github.com/KiwamiXq1031/installer-premium/raw/main/${THEME_NAME}.zip"
+
+        echo -e "${YELLOW}🔽 Mengunduh theme Billing...${NC}"
+        wget -q -O "/root/${THEME_NAME}.zip" "$THEME_URL" || { echo -e "${RED}❌ Gagal mengunduh theme.${NC}"; exit 1; }
+
+        echo -e "${YELLOW}📦 Mengekstrak file...${NC}"
+        unzip -oq "/root/${THEME_NAME}.zip" -d /root/pterodactyl
+
+        echo -e "${YELLOW}📁 Menyalin file ke direktori Pterodactyl...${NC}"
+        sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+
+        echo -e "${YELLOW}⚙️ Menginstal Node.js v20 & Yarn...${NC}"
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        sudo apt install -y nodejs
+        sudo npm install -g yarn
+
+        cd /var/www/pterodactyl || { echo -e "${RED}❌ Direktori tidak ditemukan!${NC}"; exit 1; }
+
+        echo -e "${YELLOW}🔧 Menjalankan migrasi dan build...${NC}"
+        yarn add react-feather
+        php artisan migrate --force
+        yarn build:production
+        php artisan view:clear
+
+        echo -e "${YELLOW}🧹 Membersihkan file sementara...${NC}"
+        rm -f "/root/${THEME_NAME}.zip"
+        rm -rf /root/pterodactyl
+
+        echo -e "${GREEN}✅ Theme Billing berhasil diinstall menggunakan Node.js v20!${NC}"
+        ;;
+     4)
         cd /var/www
         BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
         if [ ! -f "$BLUEPRINT_FILE" ]; then
@@ -228,7 +308,7 @@ case "$OPTION" in
 
         animate_text "NEBULA THEME BERHASIL DIINSTALL"
         ;;
-     3)
+     5)
         cd /var/www
         BLUEPRINT_FILE="/var/www/pterodactyl/blueprint.sh"
         if [ ! -f "$BLUEPRINT_FILE" ]; then
@@ -265,7 +345,7 @@ case "$OPTION" in
         animate_text "ADMIN PANEL THEME BERHASIL DIINSTALL"
         ;;
         
-             4)
+             6)
         GITHUB_TOKEN="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"
         REPO_URL="https://github.com/KiwamiXq1031/installer-premium.git"
         TEMP_DIR="installer-premium"
@@ -292,7 +372,7 @@ case "$OPTION" in
             animate_text "Gagal mengunduh file"
         fi
         ;;
-     5)
+     7)
     # Token GitHub pribadi (pastikan token valid dan punya akses repo)
     GITHUB_TOKEN="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"
 
@@ -351,7 +431,7 @@ case "$OPTION" in
     fi
     ;;
 
-     6)
+     8)
 
 # Fungsi untuk menampilkan animasi loading
 show_loading() {
@@ -413,7 +493,7 @@ yarn build:production
 echo ""
 echo -e "${GREEN}PROSES SELESAI ✅${RESET}"
 ;;
-     7)
+     9)
 # Default URL gambar
 DEFAULT_URL="https://i.postimg.cc/s2wGzpHs/zerodev.jpg"
 
@@ -465,7 +545,7 @@ mv /tmp/new_wrapper.blade.php wrapper.blade.php
 
 echo "BACKGROUND BERHASIL DIGANTI ✅"
 ;;
-8)
+10)
 # Path ke file wrapper Pterodactyl
 file_path="/var/www/pterodactyl/resources/views/templates/wrapper.blade.php"
 
@@ -547,7 +627,7 @@ else
 fi
 ;;
 
-    9)
+    11)
 echo "🧹 Menghapus semua theme dan addon..."
 cd /var/www/pterodactyl || exit 1
 
@@ -574,7 +654,7 @@ php artisan up
 echo "✅ Semua theme dan addon berhasil dihapus dan panel telah dipulihkan ke versi original."
 ;;
     
-10)
+12)
 cd /var/www/ || exit
 
 # Ngecek dependensi blueprint
@@ -633,7 +713,7 @@ else
     echo -e "❌ Gagal mengunduh file konfigurasi tambahan."
 fi
 ;;
-11)
+13)
 set -e
 
 echo -e "🔧 Menginstal dependensi dasar..."
@@ -699,16 +779,16 @@ bash "$FOLDER/blueprint.sh" >/dev/null 2>&1 || {
 
 echo -e "✅ Blueprint Framework berhasil diinstal dan dikonfigurasi!"
 ;;
-    12)
+    14)
         DISABLE_ANIMATIONS=1
         save_config
         echo -e "${YELLOW}Semua animasi telah dimatikan.${RESET}"
         ;;
-    13)
+    15)
         echo -e "${BLUE}EXIT DARI INSTALLER DIPILIH${RESET}"
         exit 0
         ;;
-     14)
+     16)
 # Navigasi ke direktori extensions
 cd /var/www/pterodactyl/public/extensions
 
@@ -734,7 +814,7 @@ else
     fi
 fi
        ;;
-15)
+17)
 # Navigasi ke direktori extensions
 cd /var/www/pterodactyl/public/extensions
 
@@ -760,7 +840,7 @@ else
     fi
 fi
 ;;
-16)
+18)
 # Navigasi ke direktori extensions
 cd /var/www/pterodactyl/public/extensions
 
@@ -786,6 +866,227 @@ else
     fi
 fi
 ;;
+19)
+# Pastikan variabel penting terisi
+if [ -z "$CONTROLLER_USER" ] || [ -z "$SERVICE_SERVER" ]; then
+    echo -e "${RED}❌ Variabel CONTROLLER_USER atau SERVICE_SERVER belum diatur.${RESET}"
+    exit 1
+fi
+
+read -p "$(echo -e "${CYAN}Masukkan User ID Admin Utama (contoh: 1): ${RESET}")" ADMIN_ID
+[ -z "$ADMIN_ID" ] && echo -e "${RED}❌ User ID tidak boleh kosong.${RESET}" && exit 1
+
+VERSION=${VERSION:-1.0.0}
+
+echo -e "${YELLOW}➤ Menambahkan Protect Delete User...${RESET}"
+if [ ! -f "$CONTROLLER_USER" ]; then
+    echo -e "${RED}❌ File ${CONTROLLER_USER} tidak ditemukan.${RESET}"
+    exit 1
+fi
+
+cp "$CONTROLLER_USER" "${CONTROLLER_USER}.bak"
+
+awk -v admin_id="$ADMIN_ID" -v version="$VERSION" '
+/public function delete\(Request \$request, User \$user\): RedirectResponse/ {
+    print; in_func = 1; next;
+}
+in_func == 1 && /^\s*{/ {
+    print;
+    print "        if ($request->user()->id !== " admin_id ") {";
+    print "            throw new DisplayException(\"Lu Siapa Mau Delet User Lain Tolol? Izin dulu sama ID 1 kalo mau delet. ©Protect By Zero - Protect V" version "\");";
+    print "        }";
+    in_func = 0; next;
+}
+{ print }
+' "${CONTROLLER_USER}.bak" > "$CONTROLLER_USER"
+
+echo -e "${GREEN}✔ Protect UserController selesai.${RESET}"
+
+
+echo -e "${YELLOW}➤ Menambahkan Protect Delete Server...${RESET}"
+if [ ! -f "$SERVICE_SERVER" ]; then
+    echo -e "${RED}❌ File ${SERVICE_SERVER} tidak ditemukan.${RESET}"
+    exit 1
+fi
+
+cp "$SERVICE_SERVER" "${SERVICE_SERVER}.bak"
+
+# Tambah use statement jika belum ada
+awk '
+BEGIN { added = 0 }
+{
+    print
+    if (!added && $0 ~ /^namespace Pterodactyl\\Services\\Servers;/) {
+        print "use Illuminate\\Support\\Facades\\Auth;"
+        print "use Pterodactyl\\Exceptions\\DisplayException;"
+        added = 1
+    }
+}
+' "$SERVICE_SERVER" > "$SERVICE_SERVER.tmp" && mv "$SERVICE_SERVER.tmp" "$SERVICE_SERVER"
+
+# Tambah logika protect ke fungsi handle()
+awk -v admin_id="$ADMIN_ID" -v version="$VERSION" '
+/public function handle\(Server \$server\): void/ {
+    print; in_func = 1; next;
+}
+in_func == 1 && /^\s*{/ {
+    print;
+    print "        $user = Auth::user();";
+    print "        if ($user && $user->id !== " admin_id ") {";
+    print "            throw new DisplayException(\"Lu Siapa Mau Delet Server Lain Tolol? Izin dulu sama ID 1 kalo mau delet. ©Protect By Zero - Protect V" version "\");";
+    print "        }";
+    in_func = 0; next;
+}
+{ print }
+' "$SERVICE_SERVER" > "${SERVICE_SERVER}.patched" && mv "${SERVICE_SERVER}.patched" "$SERVICE_SERVER"
+
+echo -e "${GREEN}✔ Protect ServerDeletionService selesai.${RESET}"
+
+
+echo -e "${YELLOW}➤ Install Node.js 20 & build ulang frontend panel...${RESET}"
+sudo apt-get update -y >/dev/null 2>&1
+sudo apt-get remove nodejs -y >/dev/null 2>&1
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - >/dev/null 2>&1
+sudo apt-get install -y nodejs >/dev/null 2>&1
+
+cd /var/www/pterodactyl || { echo -e "${RED}❌ Gagal ke direktori panel.${RESET}"; exit 1; }
+
+npm i -g yarn >/dev/null 2>&1
+yarn add cross-env >/dev/null 2>&1
+yarn build:production --progress
+
+echo -e "${GREEN}🎉 Protect V${VERSION} & Build Panel berhasil dipasang.${RESET}"
+;;
+20)
+    echo -e "${YELLOW}♻ Memulihkan dari backup...${RESET}"
+
+    [ -f "${CONTROLLER_USER}.bak" ] && cp "${CONTROLLER_USER}.bak" "$CONTROLLER_USER" && \
+        echo -e "${GREEN}✔ UserController dipulihkan.${RESET}" || \
+        echo -e "${RED}⚠ Backup UserController tidak ditemukan.${RESET}"
+
+    [ -f "${SERVICE_SERVER}.bak" ] && cp "${SERVICE_SERVER}.bak" "$SERVICE_SERVER" && \
+        echo -e "${GREEN}✔ ServerDeletionService dipulihkan.${RESET}" || \
+        echo -e "${RED}⚠ Backup ServerDeletionService tidak ditemukan.${RESET}"
+
+    echo -e "${YELLOW}➤ Build ulang panel...${RESET}"
+    cd /var/www/pterodactyl || { echo -e "${RED}❌ Gagal ke direktori panel.${RESET}"; exit 1; }
+
+    npm i -g yarn >/dev/null
+    yarn add cross-env >/dev/null
+    yarn build:production --progress
+
+    echo -e "${GREEN}✅ Restore & build selesai.${RESET}"
+    ;;
+    21)
+    read -p "$(echo -e "${CYAN}👤 Masukkan ID Admin Utama (contoh: 1): ${RESET}")" ADMIN_ID
+    if [[ -z "$ADMIN_ID" ]]; then
+        echo -e "${RED}❌ Admin ID tidak boleh kosong.${RESET}"
+        exit 1
+    fi
+
+    mkdir -p "$BACKUP_DIR"
+
+    echo -e "${YELLOW}📦 Membackup file asli sebelum di-protect ke: ${BLUE}$BACKUP_DIR${RESET}"
+    for name in "${!CONTROLLERS[@]}"; do
+        if [ -f "${CONTROLLERS[$name]}" ]; then
+            cp "${CONTROLLERS[$name]}" "$BACKUP_DIR/$name.bak"
+        else
+            echo -e "${RED}⚠️ File ${CONTROLLERS[$name]} tidak ditemukan, dilewati.${RESET}"
+        fi
+    done
+
+    echo -e "${GREEN}🔧 Menerapkan Protect hanya untuk ID $ADMIN_ID...${RESET}"
+
+    for name in "${!CONTROLLERS[@]}"; do
+        path="${CONTROLLERS[$name]}"
+        if [ ! -f "$path" ]; then
+            echo -e "${RED}⚠️ File $path tidak ditemukan, dilewati.${RESET}"
+            continue
+        fi
+
+        if ! grep -q "public function index" "$path"; then
+            echo -e "${RED}⚠️ Gagal: $name tidak memiliki 'public function index()'! Lewat.${RESET}"
+            continue
+        fi
+
+        awk -v admin_id="$ADMIN_ID" '
+        BEGIN { inserted_use=0; in_func=0; }
+        /^namespace / {
+            print;
+            if (!inserted_use) {
+                print "use Illuminate\\Support\\Facades\\Auth;";
+                inserted_use = 1;
+            }
+            next;
+        }
+        /public function index\(.*\)/ {
+            print; in_func = 1; next;
+        }
+        in_func == 1 && /^\s*{/ {
+            print;
+            print "        $user = Auth::user();";
+            print "        if (!$user || $user->id !== " admin_id ") {";
+            print "            abort(403, \"Zero Protect - Akses ditolak\");";
+            print "        }";
+            in_func = 0; next;
+        }
+        { print; }
+        ' "$path" > "$path.patched" && mv "$path.patched" "$path"
+        echo -e "${GREEN}✅ Protect diterapkan ke: $name${RESET}"
+    done
+
+    echo -e "${YELLOW}➤ Install Node.js 20 & build frontend panel...${RESET}"
+    sudo apt-get update -y >/dev/null
+    sudo apt-get remove -y nodejs >/dev/null 2>&1
+    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - >/dev/null
+    sudo apt-get install -y nodejs >/dev/null
+
+    cd /var/www/pterodactyl || { echo -e "${RED}❌ Gagal ke direktori panel.${RESET}"; exit 1; }
+
+    npm i -g yarn >/dev/null
+    yarn add cross-env >/dev/null
+    yarn build:production --progress
+
+    echo -e "\n${BLUE}🎉 Protect selesai!${RESET}"
+    echo -e "${GREEN}📁 Backup file tersimpan di: ${BLUE}$BACKUP_DIR${RESET}"
+    echo -e "${YELLOW}🛡️ Sekarang hanya ID ${CYAN}$ADMIN_ID${YELLOW} yang bisa mengakses halaman Nodes, Nests, & Settings.${RESET}"
+    ;;
+    22)
+    if [[ ! -d "$BACKUP_DIR" ]]; then
+        echo -e "${RED}❌ Folder backup tidak ditemukan: ${BLUE}$BACKUP_DIR${RESET}"
+        echo -e "${YELLOW}⚠️ Jalankan mode Protect terlebih dahulu sebelum restore.${RESET}"
+        exit 1
+    fi
+
+    echo -e "${CYAN}♻️ Mengembalikan semua file ke versi sebelum Protect...${RESET}"
+
+    for name in "${!CONTROLLERS[@]}"; do
+        src="$BACKUP_DIR/$name.bak"
+        dest="${CONTROLLERS[$name]}"
+
+        if [[ -f "$src" ]]; then
+            cp "$src" "$dest"
+            echo -e "${GREEN}🔄 Dipulihkan: ${BLUE}$name${RESET}"
+        else
+            echo -e "${RED}⚠️ Backup tidak ditemukan untuk ${YELLOW}$name${RESET}"
+        fi
+    done
+
+    echo -e "${YELLOW}➤ Rebuild panel menggunakan Node.js 20...${RESET}"
+    sudo apt-get update -y >/dev/null
+    sudo apt-get remove -y nodejs >/dev/null 2>&1
+    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - >/dev/null
+    sudo apt-get install -y nodejs >/dev/null
+
+    cd /var/www/pterodactyl || { echo -e "${RED}❌ Gagal masuk ke direktori panel.${RESET}"; exit 1; }
+
+    npm i -g yarn >/dev/null
+    yarn add cross-env >/dev/null
+    yarn build:production --progress
+
+    echo -e "\n${GREEN}✅ Restore & rebuild panel selesai.${RESET}"
+    echo -e "${BLUE}📁 Semua file dikembalikan ke versi sebelum Protect.${RESET}"
+    ;;
     *)
         echo -e "${RED}Pilihan tidak valid.${RESET}"
         ;;
