@@ -52,7 +52,8 @@ display_menu() {
     echo -e "${YELLOW}${BOLD}    [3]${RESET} ${GREEN}👑 Admin Protection Setup${RESET}"
     echo ""
     echo -e "${CYAN}${BOLD}    ┌────────────────────────────────────────────┐${RESET}"
-    echo -n -e "${CYAN}${BOLD}    │ 🎯 Select: ${RESET}"
+    echo -n -e "${CYAN}${BOLD}    │ 🎯 Select: ${OPSI}"
+    read -p "$(echo -e "${CYAN}Pilih opsi [1/2/3]: ${RESET}")" OPSI
 }
 
 # Function to deploy protection
