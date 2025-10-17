@@ -2,9 +2,9 @@
 
 # === Konfigurasi ===
 CF_API="https://api.cloudflare.com/client/v4"
-CF_ZONE_ID="b95b2842510f342cfccfd66ae4f31d09"           # Ganti dengan Zone ID domain lo
+CF_ZONE_ID="0885a91405436a41a6b0a26c05da9a74"           # Ganti dengan Zone ID domain lo
 CF_API_TOKEN="zbna8Er4lS0r5k8lp4nic9_msMi-jJyLMCtzX1Zd"       # Ganti dengan API Token Cloudflare
-DOMAIN="myzoku.my.id"                # Domain utama
+DOMAIN="zero-hosting.my.id"                # Domain utama
 
 # === Ambil input subdomain ===
 read -p "Masukkan nama subdomain: " SUBDOMAIN
